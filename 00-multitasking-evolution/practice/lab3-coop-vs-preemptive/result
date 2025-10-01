@@ -1,0 +1,16 @@
+## คำถามสำหรับวิเคราะห์
+
+1. ระบบไหนมีเวลาตอบสนองดีกว่า? เพราะอะไร?
+- ans Preemptive Multitasking มีเวลาตอบสนองดีกว่าเพราะ OS สามารถบังคับสลับงานได้ทันที แม้ว่างานปัจจุบันยังไม่เสร็จ
+
+2. ข้อดีของ Cooperative Multitasking คืออะไร?
+- ans การสื่อสารระหว่าง task ง่ายกว่า เพราะ task จะสลับอย่างเป็นระเบียบ
+
+3. ข้อเสียของ Cooperative Multitasking คืออะไร?
+- ans ไม่เหมาะกับงาน real-time หรือ interactive ที่ต้องตอบสนองเร็ว
+
+4. ในสถานการณ์ใดที่ Cooperative จะดีกว่า Preemptive?
+- ans เหมาะกับงานเบาใน embedded system ขนาดเล็กที่ task สั้นและ predictable
+
+5. เหตุใด Preemptive จึงเหมาะสำหรับ Real-time systems?
+- ans สามารถบังคับให้ task สำคัญได้ CPU ทันที ทำให้ตอบสนองต่อเหตุการณ์ทันเวลา
