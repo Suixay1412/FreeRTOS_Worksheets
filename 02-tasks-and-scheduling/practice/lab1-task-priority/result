@@ -1,0 +1,16 @@
+## คำถามสำหรับวิเคราะห์
+
+1. Priority ไหนทำงานมากที่สุด? เพราะอะไร?
+- Priority สูงสุด เพราะ FreeRTOS จะเลือก Task ที่มี priority สูงสุดให้ CPU ทำงานก่อน
+
+2. เกิด Priority Inversion หรือไม่? จะแก้ไขได้อย่างไร?
+- Priority Inversion อาจเกิดขึ้นเมื่อ Task ต่ำถือ resource ที่ Task สูงต้องใช้ แก้ได้ด้วย priority inheritance
+
+3. Tasks ที่มี priority เดียวกันทำงานอย่างไร?
+- จะถูกสลับทำงานแบบ time-slicing ตามช่วงเวลาของ scheduler
+
+4. การเปลี่ยน Priority แบบ dynamic ส่งผลอย่างไร?
+- เปลี่ยน priority แบบ dynamic ทำให้ลำดับการทำงานของ Task เปลี่ยนตามความสำคัญใหม่
+
+5. CPU utilization ของแต่ละ priority เป็นอย่างไร?
+- CPU utilization จะถูกจัดสรรให้ Task ที่ priority สูงกว่าใช้ CPU มากกว่า ส่วนต่ำกว่าจะได้ทำงานน้อยลง
